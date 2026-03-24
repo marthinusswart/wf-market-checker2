@@ -1,0 +1,14 @@
+{
+    "alerts": [
+        {
+            "item_slug": "arcane_ice",
+            "max_price": 10,
+            "rank": 5         
+        },
+        {
+            "item_slug": "arcane_hot_shot",
+            "max_price": 450,
+            "rank": 5
+        }
+    ]
+}
