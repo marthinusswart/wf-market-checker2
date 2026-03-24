@@ -19,7 +19,7 @@ class Alert:
         if order.user.status != "ingame":
             return False
         
-        if order.rank < self.rank:
+        if order.rank is not None and order.rank < self.rank:
             return False
             
         return True

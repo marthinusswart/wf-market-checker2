@@ -9,6 +9,10 @@
             "item_slug": "arcane_hot_shot",
             "max_price": 450,
             "rank": 5
+        },
+        {
+            "item_slug": "afuris_prime_receiver",
+            "max_price": 30            
         }
     ]
 }
