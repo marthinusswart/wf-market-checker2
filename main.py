@@ -30,13 +30,13 @@ async def check_orders(client, tracked_items, alert_manager):
             relevant_alerts = [a for a in alert_manager.get_alerts() if a.item_slug == item_slug]
 
             print("===============================================================") 
-            print(f"Checking orders for {item_slug}")
-            print("===============================================================") 
+            print(f"Checking orders for {item_slug}")            
             
             for order in orders:
                 if any(alert.check_condition(order) for alert in relevant_alerts):
                     rank_str = f", Rank: {order.rank}" if order.rank is not None else ""
                     print(f"Alert triggered User: {order.user.ingame_name}{rank_str}, Price: {order.platinum}, Status: {order.user.status}")
+            print("===============================================================") 
         except httpx.HTTPStatusError as e:
             print(f"Error fetching orders for {item_slug}: {e}")
 
